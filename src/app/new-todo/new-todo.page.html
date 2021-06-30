@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Criar tarefa</ion-title>
+    <ion-icon name="close-outline" (click)="dismiss()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+  <ion-item>
+    <ion-input class="input" placeholder="Digite o título"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input class="input" placeholder="Adicione a descrição"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-datetime displayFormat="DD-MM-YYYY" placeholder="Inserir prazo"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-select placeholder="Inserir categoria">
+      <ion-select-option value="1">Categoria 1</ion-select-option>
+      <ion-select-option value="2">Categoria 2</ion-select-option>
+      <ion-select-option value="3">Categoria 3</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+      <ion-input class="input" placeholder="Adicionar membros"></ion-input>
+  </ion-item>
+  <ion-item>
+    Inserir anexo:<input type="file" name="file" id="file">
+  </ion-item>
+  </ion-list>
+  <hr>
+  <section>
+    <div class="check">
+      <ion-checkbox color="primary"></ion-checkbox> <ion-input type="text" placeholder="sub-tarefa-exemplo"></ion-input>
+    </div>
+    <div class="check">
+      <ion-checkbox color="primary"></ion-checkbox> <ion-input type="text" placeholder="sub-tarefa-exemplo"></ion-input>
+    </div>
+    <div class="check">
+      <ion-checkbox color="primary"></ion-checkbox> <ion-input type="text" placeholder="sub-tarefa-exemplo"></ion-input>
+    </div>
+  </section>
+
+</ion-content>

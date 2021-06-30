@@ -1,0 +1,24 @@
+<div class="drawer" #drawer>
+  
+  <div class="icon" [hidden]='ishidden'>
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </div>
+  <div class="slider-bar" (click)="toggleDrawer()"></div>
+
+  <h1>{{primaryText}}</h1>
+  <form>
+    <ion-input class="input" placeholder="Nome" [hidden]="nameHidden"></ion-input>
+    <ion-input class="input" placeholder="Email"></ion-input>
+
+    <ion-input class="input" placeholder="Senha" [type]="fieldTextType ? 'text' : 'password'">
+      <ion-icon name="eye-off-outline" (click)="toggleFieldTextType()"></ion-icon>
+    </ion-input>
+    <ion-input class="input" placeholder="Repetir senha" [hidden]="passwordHidden" [type]="fieldTextType ? 'text' : 'password'">
+      <ion-icon name="eye-off-outline" (click)="toggleFieldTextType()"></ion-icon>
+    </ion-input>
+
+  </form>
+    <ion-button (click)="btnClick()" expand="block">{{primaryText}}</ion-button>
+  <ion-button (click)="btnClick()" color="light" expand="block"><img src="../../assets/search.png" alt="google icon"> {{primaryText}} com o Google</ion-button>
+  <button (click)="changeForm()">{{buttonText}}</button>
+</div>

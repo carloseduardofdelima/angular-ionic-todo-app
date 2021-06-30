@@ -1,17 +1,36 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
+  <main>
+
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Tarefas</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <section class="todo-list">
+    <h1>A fazer</h1>
+    <div *ngFor="let item of allItems">
+      <app-todo *ngIf="!item.checked" [todoName]="item.todoName" [todoDesc]="item.todoDesc"></app-todo>
+    </div>
+   
+  </section>
+  
+  
+  <section class="progress" scrollX="true">
+    <h1>Em progresso</h1>
+    <div class="prog-list">
+      <div *ngFor="let item of allItems">
+        <app-todo class="square" [todoName]="item.todoName" [todoDesc]="item.todoDesc"></app-todo>
+      </div>
+    </div>
+  </section>
+
+  <section class="finished">
+    <h1>Concluído</h1>
+    <div *ngFor="let item of allItems">
+      <app-todo *ngIf="item.checked" [todoName]="item.todoName" [todoDesc]="item.todoDesc"></app-todo>
+    </div>
+  </section>
+</main>
+
 </ion-content>

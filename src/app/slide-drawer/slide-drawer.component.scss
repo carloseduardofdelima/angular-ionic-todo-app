@@ -1,0 +1,66 @@
+.drawer {
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 16px;
+    width: 100vw;
+    border-radius: 20px;
+    padding: 0px 40px;
+    bottom:calc(-80vh + env(safe-area-inset-bottom));
+    height: 90vh;
+    z-index: 10;
+    background: rgba(235, 244, 253);
+}
+
+.slider-bar {
+    height: 4px;
+    width: 150px;
+    border-radius: 2px;
+    background:gray;
+    margin: 30px auto;
+}
+
+.icon {
+    margin: 20px 0px;
+}
+
+h1 {
+    text-align: left;
+    color: #1A55B4;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 50px 0px;
+}
+
+button {
+    text-decoration: none;
+    color: gray;
+    background: none;
+}
+
+form {
+    margin: 40px auto;
+    color: black;
+}
+
+.input {
+    text-align: left;
+    border-bottom: 1px solid gray;
+    margin-top: 10px;
+    
+}
+
+ion-input ion-icon {
+    position: relative;
+    left: 90%;
+}
+
+ion-button {
+    margin: 20px 0;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 16px;
+}
+
+ion-button img {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    right: 20px;
+}
